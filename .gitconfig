@@ -6,8 +6,8 @@
 	helper = osxkeychain
 [core]
     # Globally ignore files/patterns listed here
-	excludesfile = /Users/alex/.gitignore
-	editor = subl -w
+    excludesfile = /Users/alex/.gitignore
+    editor = emac
 [push]
     # help prevent push --force accidents (noted above)
     default = simple

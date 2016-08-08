@@ -16,6 +16,10 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git osx brew go sublime)
 
+# Set default editor as emacs (without environment sourced, though)
+export EDITOR=emacs
+export VISUAL=$EDITOR
+
 # Gopath
 export GOPATH=$HOME/go
 

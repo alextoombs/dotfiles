@@ -20,8 +20,9 @@ plugins=(git osx brew go sublime)
 export EDITOR=emacs
 export VISUAL=$EDITOR
 
-# Gopath
-export GOPATH=$HOME/go
+# Golang configuration
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 
 # Aliases
 source $ZSH/oh-my-zsh.sh

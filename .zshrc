@@ -17,7 +17,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git osx brew go sublime)
 
 # Set default editor as emacs (without environment sourced, though)
-export EDITOR=emacs
+export EDITOR=emacsclient
 export VISUAL=$EDITOR
 
 # Golang configuration

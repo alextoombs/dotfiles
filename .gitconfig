@@ -7,7 +7,7 @@
 [core]
     # Globally ignore files/patterns listed here
     excludesfile = /Users/alex/.gitignore
-    editor = emac
+    editor = emacsclient
 [push]
     # help prevent push --force accidents (noted above)
     default = simple

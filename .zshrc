@@ -14,7 +14,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx brew go sublime)
+plugins=(git osx brew go sublime rails ruby git)
 
 # Set default editor as emacs (without environment sourced, though)
 export EDITOR=emacsclient
@@ -30,7 +30,7 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Git
-alias gca='git commit -a -v'
+alias gca='git commit -a -S -v'
 alias ga='git add'
 alias gap='git add -p'
 alias gs='git status'

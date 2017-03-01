@@ -1,7 +1,7 @@
 [user]
 	name = Alex Toombs
 	email = alex.m.toombs@gmail.com
-	signingkey = 09E0AD60
+	signingkey = FF1731EE09E0AD60
 [credential]
 	helper = osxkeychain
 [core]
@@ -45,7 +45,7 @@
     # force push to github
     pf = push origin +HEAD
     # verbose commits, with signatures
-    commit = commit -v
+	commit = commit -v -S
     ca = commit -a -v
 
     # cherry picks

@@ -30,6 +30,7 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Git
+alias gc="git commit -S -v"
 alias gca='git commit -a -S -v'
 alias ga='git add'
 alias gap='git add -p'

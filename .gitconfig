@@ -45,7 +45,8 @@
     # force push to github
     pf = push origin +HEAD
     # verbose commits, with signatures
-	commit = commit -v -S
+    c = commit	
+    commit = commit -v -S
     ca = commit -a -v
 
     # cherry picks

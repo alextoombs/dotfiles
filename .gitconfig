@@ -49,6 +49,9 @@
     commit = commit -v -S
     ca = commit -a -v
 
+    # Rebase with signatures
+    rebase = rebase -S	
+
     # cherry picks
     cp=cherry-pick
 

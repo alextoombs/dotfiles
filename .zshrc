@@ -40,3 +40,6 @@ alias gco='git checkout'
 alias gcm='git checkout master'
 alias gf='git fetch -p'
 alias gcp='git cherry-pick'
+
+# GPG agent
+eval $(gpg-agent --daemon --allow-preset-passphrase)

@@ -41,8 +41,5 @@ alias gcm='git checkout master'
 alias gf='git fetch -p'
 alias gcp='git cherry-pick'
 
-# GPG agent
-eval $(gpg-agent --daemon --allow-preset-passphrase)
-
 # Initialize rbenv if installed
 [ -f /usr/local/bin/rbenv ] || eval "$(rbenv init -)"

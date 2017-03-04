@@ -67,3 +67,5 @@
 	enabled = true
 [gpg]
 	program = gpg1
+[commit]
+	gpgsign = true

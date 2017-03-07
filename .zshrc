@@ -16,14 +16,6 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git osx brew go sublime rails ruby git)
 
-# Set default editor as emacs (without environment sourced, though)
-export EDITOR=emacsclient
-export VISUAL=$EDITOR
-
-# Golang configuration
-export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:$PATH"
-
 # Aliases
 source $ZSH/oh-my-zsh.sh
 alias zshconfig="mate ~/.zshrc"
@@ -43,3 +35,14 @@ alias gcp='git cherry-pick'
 
 # Initialize rbenv if installed
 [ -f /usr/local/bin/rbenv ] || eval "$(rbenv init -)"
+
+# Set default editor as emacs (without environment sourced, though)
+export EDITOR=emacsclient
+export VISUAL=$EDITOR
+
+# Golang configuration
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
+
+# rbenv configuration
+export PATH="$HOME/.rbenv/shims:$PATH"

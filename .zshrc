@@ -46,3 +46,4 @@ export PATH="$GOPATH/bin:$PATH"
 
 # rbenv configuration
 export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="/usr/local/opt/gpg-agent/bin:$PATH"

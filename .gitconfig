@@ -63,6 +63,7 @@
 	autosetupmerge = true
 [diff]
     algorithm = histogram
+	indentHeuristic = on
 [rerere]
 	enabled = true
 [gpg]

@@ -1,13 +1,13 @@
 [user]
 	name = Alex Toombs
 	email = alex.m.toombs@gmail.com
-	signingkey = FF1731EE09E0AD60
+	signingkey = 081D3FDA8B5E145A
 [credential]
 	helper = osxkeychain
 [core]
     # Globally ignore files/patterns listed here
     excludesfile = /Users/alex/.gitignore
-    editor = emacsclient
+    editor = code
 [push]
     # help prevent push --force accidents (noted above)
     default = simple
@@ -67,6 +67,6 @@
 [rerere]
 	enabled = true
 [gpg]
-	program = gpg1
+	program = gpg
 [commit]
 	gpgsign = true

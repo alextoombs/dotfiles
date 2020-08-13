@@ -54,3 +54,4 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 
 export ALTO_EMAIL='alex@scriptdash.com'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

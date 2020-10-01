@@ -7,7 +7,11 @@
 [core]
     # Globally ignore files/patterns listed here
     excludesfile = /Users/alex/.gitignore
-    editor = code
+    editor = code --wait
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 [push]
     # help prevent push --force accidents (noted above)
     default = simple

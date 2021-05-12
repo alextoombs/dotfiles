@@ -55,7 +55,5 @@ export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# GPG Settings
-if [ -r ~/.zshrc ]; then echo 'export GPG_TTY=$(tty)' >> ~/.zshrc; \
-  else echo 'export GPG_TTY=$(tty)' >> ~/.zprofile; fi
+export GPG_TTY=$(tty)
 

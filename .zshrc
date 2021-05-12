@@ -53,5 +53,9 @@ export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 
-export ALTO_EMAIL='alex@scriptdash.com'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# GPG Settings
+if [ -r ~/.zshrc ]; then echo 'export GPG_TTY=$(tty)' >> ~/.zshrc; \
+  else echo 'export GPG_TTY=$(tty)' >> ~/.zprofile; fi
+

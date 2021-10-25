@@ -41,8 +41,7 @@ source $(brew --prefix nvm)/nvm.sh
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# Set default editor as emacs (without environment sourced, though)
-export EDITOR=emacsclient
+export EDITOR=code
 export VISUAL=$EDITOR
 
 # Golang configuration
@@ -56,4 +55,3 @@ export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export GPG_TTY=$(tty)
-

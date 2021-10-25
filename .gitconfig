@@ -1,7 +1,7 @@
 [user]
 	name = Alex Toombs
 	email = alex.m.toombs@gmail.com
-	signingkey = 79A57521D91B4C29
+	signingkey = 7126948879754166
 [credential]
 	helper = osxkeychain
 [core]

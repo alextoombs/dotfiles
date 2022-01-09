@@ -14,7 +14,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx brew golang sublime rails ruby git)
+plugins=(git macos brew golang sublime rails ruby git)
 
 # Aliases
 source $ZSH/oh-my-zsh.sh
@@ -34,10 +34,10 @@ alias gf='git fetch -p'
 alias gcp='git cherry-pick'
 
 # Initialize rbenv if installed
-[ -f /usr/local/bin/rbenv ] || eval "$(rbenv init -)"
+[ -f /usr/local/bin/rbenv ] && eval "$(rbenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
+[ -s "$(brew --prefix nvm)/nvm.sh" ] && source $(brew --prefix nvm)/nvm.sh
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 

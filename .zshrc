@@ -14,7 +14,11 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git macos brew golang sublime rails ruby git)
+if [[ $(command -v brew) != "" ]]; then
+  plugins=(git macos brew golang sublime rails ruby git)
+else
+  plugins=(git golang sublime rails ruby git)
+fi
 
 # Aliases
 source $ZSH/oh-my-zsh.sh
@@ -33,13 +37,12 @@ alias gcm='git checkout master'
 alias gf='git fetch -p'
 alias gcp='git cherry-pick'
 
-# Initialize rbenv if installed
-[ -f /usr/local/bin/rbenv ] && eval "$(rbenv init -)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$(brew --prefix nvm)/nvm.sh" ] && source $(brew --prefix nvm)/nvm.sh
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+if [[ $(command -v brew) != "" && $(command -v nvm) != "" ]]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$(brew --prefix nvm)/nvm.sh" ] && source $(brew --prefix nvm)/nvm.sh
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+fi
 
 export EDITOR=code
 export VISUAL=$EDITOR

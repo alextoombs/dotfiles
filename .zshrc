@@ -51,10 +51,21 @@ export VISUAL=$EDITOR
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
-# rbenv configuration
-export PATH="$HOME/.rbenv/shims:$PATH"
-export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
+# rbenv configuration and initialization
+if [[ $(command -v rbenv) != "" ]]; then
+  eval "$(rbenv init -)"
+  export PATH="$HOME/.rbenv/shims:$PATH"
+  export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export GPG_TTY=$(tty)
+if [ -e /Users/alex.toombs/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/alex.toombs/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+#compdef clyde
+_clyde() {
+  eval $(env COMMANDLINE="${words[1,$CURRENT]}" _CLYDE_COMPLETE=complete-zsh  clyde)
+}
+if [[ "$(basename -- ${(%):-%x})" != "_clyde" ]]; then
+  compdef _clyde clyde
+fi

@@ -1,6 +1,15 @@
 #! /bin/sh
 set -e
-ln -sf ~/dotfiles/.profile ~/.profile
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
-ln -sf ~/dotfiles/.zprofile ~/.zprofile
+
+DOTFILES=".profile
+.zshrc
+.zprofile
+.gitconfig"
+
+for f in $DOTFILES; do
+  if test -f ~/"$f"; then
+    cat ~/dotfiles/"$f" >> ~/"$f"
+  else
+    ln -sf ~/dotfiles/"$f" ~/"$f"
+  fi
+done

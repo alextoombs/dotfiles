@@ -1,5 +1,6 @@
-git clone git@github.com:alextoombs/dotfiles.git
-ln -s ~/dotfiles/.profile ~/.profile
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/.zprofile ~/.zprofile
+#! /bin/sh
+set -e
+ln -sf ~/dotfiles/.profile ~/.profile
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/.zprofile ~/.zprofile

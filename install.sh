@@ -1,15 +1,16 @@
 #! /bin/sh
 set -e
 
-DOTFILES=".profile
-.zshrc
-.zprofile
-.gitconfig"
-
-for f in $DOTFILES; do
-  if test -f ~/"$f"; then
+echo "Installing dotfiles to $HOME..."
+for f in .profile .zshrc .zprofile .gitconfig
+do
+  echo "  checking for file $f in $HOME"
+  if test -e ~/"$f"; then
+    echo "  - file exists"
     cat ~/dotfiles/"$f" >> ~/"$f"
   else
+    echo "  - file does not exist, symlinking"
     ln -sf ~/dotfiles/"$f" ~/"$f"
   fi
 done
+echo "  done!"

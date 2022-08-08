@@ -25,7 +25,7 @@
     br = branch
     co = checkout
     # remove local merged branches
-    clean-branches = "!f() { git branch --merged ${1:-main} | egrep -v \"(^\\*|${1:-main})\" | xargs -r git branch -d; };f"
+    clean-branches = ! git branch -d `git branch --merged | grep -v '^*\\|main\\|master\\|staging\\|devel'`
     # show ancestors of the current HEAD in a topologically sorted graph
     lg = log --graph --decorate --oneline
     # show ancestors of all refs in a topologically sorted graph

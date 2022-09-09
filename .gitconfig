@@ -15,6 +15,7 @@
 [push]
     # help prevent push --force accidents (noted above)
     default = simple
+	autoSetupRemote = 1
 [color]
     # color things when sending output to a terminal
 	ui = true

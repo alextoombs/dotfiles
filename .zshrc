@@ -58,6 +58,8 @@ if [[ $(command -v rbenv) != "" ]]; then
   export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 fi
 
+export PATH="$HOME/.local/bin:$PATH"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export GPG_TTY=$(tty)

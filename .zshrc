@@ -69,3 +69,4 @@ _clyde() {
 if [[ "$(basename -- ${(%):-%x})" != "_clyde" ]]; then
   compdef _clyde clyde
 fi
+ssh-add --apple-use-keychain -q
